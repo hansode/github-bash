@@ -1,10 +1,4 @@
-#!/bin/bash
-#
-# requires:
-#  bash
-#
-# description:
-#  GitHub API Client
+# -*-Shell-script-*-
 #
 
 # include files
@@ -28,4 +22,3 @@ GITHUB_API_VERSION=${GITHUB_API_VERSION:-3}
 GITHUB_HOST=${GITHUB_HOST:-api.github.com}
 GITHUB_PORT=${GITHUB_PORT:-443}
 GITHUB_BASE_URI=${GITHUB_BASE_URI:-https://${GITHUB_HOST}:${GITHUB_PORT}}
-GITHUB_RESPONSE_FORMAT=${GITHUB_RESPONSE_FORMAT:-yml}
