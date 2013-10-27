@@ -1,7 +1,5 @@
 # -*-Shell-script-*-
 #
-#
-#
 
 GITHUB_PROMPT='$'
 GITHUB_ARGS=
