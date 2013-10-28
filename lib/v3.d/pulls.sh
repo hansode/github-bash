@@ -7,7 +7,7 @@ task_list() {
   local owner=$1 repo=$2
 
   call_api -X GET \
-   $(base_uri)/repos/${owner}/${repo}/pulls
+   $(base_uri)/repos/${owner}/${repo}/pulls?state=${state:-open}
 }
 
 task_get() {
