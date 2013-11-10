@@ -31,3 +31,15 @@ task_new() {
 	}
 	EOS
 }
+
+task_merge() {
+  # http://developer.github.com/v3/pulls/#merge-a-pull-request-merge-buttontrade
+  local owner=$1 repo=$2 number=$3
+
+  call_api -X PUT --data @- \
+   $(base_uri)/repos/${owner}/${repo}/pulls/${number}/merge <<-EOS
+	{
+	  "commit_message": "${commit_message}"
+	}
+	EOS
+}
