@@ -8,5 +8,15 @@ task_issue_list() {
   local owner=$1 repo=$2
 
   call_api -X GET \
-   $(base_uri)/repos/${owner}/${repo}/issues?state=${state:-open}
+   $(base_uri)/repos/${owner}/${repo}/issues?$(query_string \
+    $(add_param milestone string optional) \
+    $(add_param state     string optional) \
+    $(add_param assignee  string optional) \
+    $(add_param creator   string optional) \
+    $(add_param mentioned string optional) \
+    $(add_param labels    string optional) \
+    $(add_param sortsort  string optional) \
+    $(add_param direction string optional) \
+    $(add_param since     string optional) \
+  )
 }
