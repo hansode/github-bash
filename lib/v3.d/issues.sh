@@ -20,3 +20,12 @@ task_issue_list() {
     $(add_param since     string optional) \
   )
 }
+
+
+task_issue_get() {
+  # http://developer.github.com/v3/issues/#get-a-single-issue
+  local owner=$1 repo=$2 number=$3
+
+  call_api -X GET \
+   $(base_uri)/repos/${owner}/${repo}/issues/${number}
+}
