@@ -45,3 +45,19 @@ task_issue_new() {
 	}
 	EOS
 }
+
+task_issue_update() {
+  # http://developer.github.com/v3/issues/#edit-an-issue
+  local owner=$1 repo=$2 number=$3
+
+  call_api -X PATCH --data @- \
+   $(base_uri)/repos/${owner}/${repo}/issues/${number} <<-EOS
+	{
+	  "title": "${title}",
+	  "body": "${body}",
+	  "assignee": "${assignee}",
+	  "milestone": "${milestone}",
+	  "labels": "${labels}"
+	}
+	EOS
+}
