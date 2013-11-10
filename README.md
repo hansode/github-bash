@@ -9,6 +9,25 @@ Requirements
 + bash
 + curl
 
+Usage
+-----
+
+```bash
+github.sh <namespace> <command>
+```
+
+Installation
+------------
+
+```bash
+git clone https://github.com/hansode/github-bash
+```
+
+Links
+-----
+
++ [curlet](https://github.com/hansode/curlet)
+
 License
 -------
 
