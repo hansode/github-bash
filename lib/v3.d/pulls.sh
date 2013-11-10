@@ -4,6 +4,7 @@
 . ${BASH_SOURCE[0]%/*}/base.sh
 
 task_list() {
+  # http://developer.github.com/v3/pulls/#list-pull-requests
   local owner=$1 repo=$2
 
   call_api -X GET \
@@ -11,6 +12,7 @@ task_list() {
 }
 
 task_get() {
+  # http://developer.github.com/v3/pulls/#get-a-single-pull-request
   local owner=$1 repo=$2 number=$3
 
   call_api -X GET \
