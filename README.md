@@ -9,6 +9,13 @@ Requirements
 + bash
 + curl
 
+Getting Started
+---------------
+
+```bash
+github.sh issues issue-list hansode github-bash --state open
+```
+
 Usage
 -----
 
