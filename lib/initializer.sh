@@ -18,6 +18,12 @@ function rc_path() {
   echo ${GITHUB_RC:-${HOME}/.githubrc}
 }
 
+function request_header() {
+  if [[ -n "${auth_token}" ]]; then
+    echo -H "\"Authorization: token ${auth_token}\""
+  fi
+}
+
 ## GITHUB part
 
 load_rc
