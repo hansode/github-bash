@@ -29,3 +29,19 @@ task_issue_get() {
   call_api -X GET \
    $(base_uri)/repos/${owner}/${repo}/issues/${number}
 }
+
+task_issue_new() {
+  # http://developer.github.com/v3/issues/#create-an-issue
+  local owner=$1 repo=$2
+
+  call_api -X POST --data @- \
+   $(base_uri)/repos/${owner}/${repo}/issues <<-EOS
+	{
+	  "title": "${title}",
+	  "body": "${body}",
+	  "assignee": "${assignee}",
+	  "milestone": "${milestone}",
+	  "labels": "${labels}"
+	}
+	EOS
+}
