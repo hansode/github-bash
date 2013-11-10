@@ -34,6 +34,21 @@ task_new() {
 	EOS
 }
 
+task_update() {
+  # http://developer.github.com/v3/pulls/#update-a-pull-request
+  local owner=$1 repo=$2 number=$3
+
+  call_api -X PATCH --data @- \
+   $(base_uri)/repos/${owner}/${repo}/pulls/${number} <<-EOS
+	{
+	  "title": "${title}",
+	  "body": "${body}",
+	  "state": "${state}"
+	}
+	EOS
+}
+
+
 task_merge() {
   # http://developer.github.com/v3/pulls/#merge-a-pull-request-merge-buttontrade
   local owner=$1 repo=$2 number=$3
