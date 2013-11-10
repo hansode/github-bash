@@ -3,7 +3,7 @@
 
 # include files
 
-. ${BASH_SOURCE[0]%/*}/functions.sh
+. ${BASH_SOURCE[0]%/*}/curlet.sh
 
 # variables
 
@@ -12,13 +12,19 @@
 LANG=C
 LC_ALL=C
 
+## curlet part
+
+function rc_path() {
+  echo ${GITHUB_RC:-${HOME}/.githubrc}
+}
+
 ## GITHUB part
 
-load_githubrc
+load_rc
 
 extract_args $@
 
-GITHUB_API_VERSION=${GITHUB_API_VERSION:-3}
-GITHUB_HOST=${GITHUB_HOST:-api.github.com}
-GITHUB_PORT=${GITHUB_PORT:-443}
-GITHUB_BASE_URI=${GITHUB_BASE_URI:-https://${GITHUB_HOST}:${GITHUB_PORT}}
+API_VERSION=${API_VERSION:-3}
+API_HOST=${API_HOST:-api.github.com}
+API_PORT=${API_PORT:-443}
+API_BASE_URI=${API_BASE_URI:-https://${API_HOST}:${API_PORT}}

@@ -4,7 +4,7 @@
 #  bash
 #
 # description:
-#  wakame-vdc dcmgr(api) client
+#  GitHub API Client
 #
 set -e
 
@@ -14,4 +14,4 @@ set -e
 
 # main
 
-run_cmd ${GITHUB_ARGS}
+run_cmd ${COMMAND_ARGS}
