@@ -13,7 +13,7 @@ Getting Started
 ---------------
 
 ```bash
-github.sh issues issue-list hansode github-bash --state open
+github.sh issues issue-list hansode github-bash --state open --auth-token=<auth-token>
 ```
 
 Usage
