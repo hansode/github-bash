@@ -28,7 +28,7 @@ function request_header() {
 
 load_rc
 
-extract_args $@
+extract_args "$@"
 
 API_VERSION=${API_VERSION:-3}
 API_HOST=${API_HOST:-api.github.com}
