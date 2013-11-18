@@ -1,6 +1,8 @@
 github-bash
 ===========
 
+[![Build Status](https://travis-ci.org/hansode/github-bash.png)](https://travis-ci.org/hansode/github-bash)
+
 A Bash wrapper for the [GitHub API v3](http://developer.github.com/v3/).
 
 Requirements
