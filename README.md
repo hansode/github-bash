@@ -15,7 +15,7 @@ Getting Started
 ---------------
 
 ```bash
-github.sh issues issue-list hansode github-bash --state open --auth-token=<auth-token>
+github.sh issues issue-list hansode github-bash --state open --auth-token <auth-token>
 ```
 
 Usage
