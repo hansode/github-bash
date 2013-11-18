@@ -8,8 +8,8 @@ A Bash wrapper for the [GitHub API v3](http://developer.github.com/v3/).
 Requirements
 ------------
 
-+ bash
-+ curl
++ [bash](http://www.gnu.org/software/bash/bash.html)
++ [curl](http://curl.haxx.se/)
 
 Getting Started
 ---------------
