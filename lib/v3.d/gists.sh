@@ -46,7 +46,7 @@ task_new() {
 	  "description": "${description}",
 	  "public": ${public:-false},
           "files": {
-	    "${file}": {"content": "${content:-$(sed '{:q;N;s/\n/\\n/g;t q}' ${file})}"}
+	    "${file##*/}": {"content": "${content:-$(sed '{:q;N;s/\n/\\n/g;t q}' ${file})}"}
 	  }
 	}
 	EOS
